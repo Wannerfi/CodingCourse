@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     l = [1, 2, 3]
     d = {"1": "a"}
-    test(*l, **d) # 解包
+    test(*l, **d) # 解包/拆包
 
     # 匿名函数 lambda，匿名函数本质是重载了函数调用运算符的类
     func = lambda x: x ** 2

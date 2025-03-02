@@ -30,6 +30,19 @@ int main() {
     B b; // 实例化
     B &tb = b; // 引用，即别名，指向同一块地址
     cout << (&tb) << " " << &b << endl;
+
+    // 匿名函数 lambda
+    class Lambda {
+    public:
+        // 重载函数操作符
+        int operator() (int a, int b) {
+            return a + b;
+        }
+    };
+    Lambda ab = Lambda();
+    auto ac = [](int a, int b) {return a + b;};
+    cout << ab(1, 2) << " " << ac(1, 2) << endl;
+
     return 0;
 }
 
